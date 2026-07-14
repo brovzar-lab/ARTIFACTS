@@ -36,22 +36,33 @@
   .cat.active .cat-count{color:#fff;background:rgba(255,255,255,.2)}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
-  .artifact{position:relative;display:block;text-decoration:none;color:inherit;overflow:hidden;
-    background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
-    border:1px solid rgba(255,255,255,.7);border-radius:22px;padding:24px 24px 20px;
-    box-shadow:0 10px 30px rgba(40,40,90,.10);
-    transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
-  .artifact::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
-  .artifact:hover{transform:translateY(-3px);background:rgba(255,255,255,.86);
-    box-shadow:0 18px 44px rgba(40,40,90,.18)}
-  .artifact-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px}
-  .pill{font-size:11px;font-weight:650;letter-spacing:.02em;padding:4px 11px;border-radius:999px;
-    color:var(--accent);background:color-mix(in srgb,var(--accent) 13%,#fff)}
-  .date{font-size:12px;color:#7b7b92;font-variant-numeric:tabular-nums}
+  .artifact{position:relative;display:flex;flex-direction:column;text-decoration:none;color:inherit;
+    background:rgba(255,255,255,.66);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.7);border-radius:22px;padding:22px 22px 22px;
+    box-shadow:0 8px 26px rgba(40,40,90,.10),inset 0 1px 0 rgba(255,255,255,.55);
+    transition:transform .2s cubic-bezier(.22,1,.36,1),box-shadow .2s ease,background .2s ease,border-color .2s ease}
+  .artifact:hover{transform:translateY(-4px);background:rgba(255,255,255,.82);
+    border-color:color-mix(in srgb,var(--accent) 40%,rgba(255,255,255,.7));
+    box-shadow:0 18px 42px rgba(40,40,90,.16),0 6px 18px color-mix(in srgb,var(--accent) 22%,transparent),inset 0 1px 0 rgba(255,255,255,.6)}
+  .artifact-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+  .pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.01em;
+    padding:5px 12px;border-radius:999px;color:var(--accent);
+    background:color-mix(in srgb,var(--accent) 12%,#fff);
+    border:1px solid color-mix(in srgb,var(--accent) 22%,transparent)}
+  .date{font-size:12px;color:#8a8894;font-weight:500;font-variant-numeric:tabular-nums}
   .artifact-title{font-size:18px;font-weight:600;letter-spacing:-.015em;line-height:1.28;
     margin-bottom:8px;color:#1a1a28}
-  .artifact-desc{font-size:14px;color:#5c5c74;line-height:1.5}
-  .go{display:inline-block;margin-top:16px;font-size:13px;font-weight:600;color:var(--accent)}
+  .artifact-desc{font-size:14px;color:#5c5c74;line-height:1.55;margin-bottom:18px}
+  .go{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:7px;
+    font-size:13px;font-weight:600;color:var(--accent);
+    background:color-mix(in srgb,var(--accent) 10%,#fff);
+    border:1px solid color-mix(in srgb,var(--accent) 20%,transparent);
+    padding:8px 15px;border-radius:999px;
+    transition:background .18s ease,color .18s ease,box-shadow .18s ease,border-color .18s ease}
+  .go .arrow{transition:transform .18s cubic-bezier(.22,1,.36,1)}
+  .artifact:hover .go{background:var(--accent);color:#fff;border-color:var(--accent);
+    box-shadow:0 6px 16px color-mix(in srgb,var(--accent) 35%,transparent)}
+  .artifact:hover .go .arrow{transform:translateX(3px)}
 
   .empty{display:none;grid-column:1/-1;text-align:center;color:rgba(255,255,255,.85);
     padding:54px 0;font-size:15px}
@@ -73,7 +84,7 @@
     </nav>
 
     <main class="grid">
-      <a class="artifact" href="personal/pai-watchlist.html" data-category="personal" style="--accent:#8b5cf6"><div class="artifact-head"><span class="pill">🧠 Personal</span><span class="date">2026-07-13</span></div><div class="artifact-title">PAI Watchlist — Daniel Miessler</div><div class="artifact-desc">Four videos on Personal AI Infrastructure: the philosophy, the anatomy, a real audit, and the hands-on build.</div><span class="go">Open &rarr;</span></a>
+      <a class="artifact" href="personal/pai-watchlist.html" data-category="personal" style="--accent:#8b5cf6"><div class="artifact-head"><span class="pill">🧠 Personal</span><span class="date">2026-07-13</span></div><div class="artifact-title">PAI Watchlist — Daniel Miessler</div><div class="artifact-desc">Four videos on Personal AI Infrastructure: the philosophy, the anatomy, a real audit, and the hands-on build.</div><span class="go">Open <span class="arrow">&rarr;</span></span></a>
       <div class="empty" id="empty">Nothing here yet.</div>
     </main>
 
