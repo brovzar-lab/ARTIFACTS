@@ -59,10 +59,12 @@ for a in sorted(artifacts, key=lambda x: x.get("date", ""), reverse=True):
 built = datetime.date.today().isoformat()
 
 CSS = """
-  :root{ --ink:#1b1b27; --accent:#6b5ce6; }
+  @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap");
+  :root{ --ink:#1b1b27; --accent:#6b5ce6;
+    --font-sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,"Helvetica Neue",Arial,sans-serif; }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,"Helvetica Neue",Arial,sans-serif;
+    font-family:var(--font-sans);
     background:radial-gradient(1300px 820px at 50% -10%, #a9b7f0 0%, #b1ace9 44%, #c8b9e6 100%) fixed;
     color:var(--ink); min-height:100vh; -webkit-font-smoothing:antialiased;
     padding:66px 22px 92px;
