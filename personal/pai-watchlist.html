@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Personal AI Infrastructure — Watchlist</title>
+<style>
+  :root {
+    --bg: #0b0d12;
+    --bg-2: #12151d;
+    --card: #171b24;
+    --card-hover: #1c212c;
+    --line: #262c38;
+    --text: #eef1f6;
+    --muted: #99a2b3;
+    --accent: #ff3b30;
+    --accent-soft: rgba(255, 59, 48, 0.12);
+    --green: #34d399;
+    --amber: #fbbf24;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    background: radial-gradient(1200px 600px at 50% -10%, #1a1f2b 0%, var(--bg) 55%);
+    color: var(--text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    padding: 48px 20px 72px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  header { margin-bottom: 36px; }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .lede { color: var(--muted); font-size: 16px; max-width: 60ch; }
+
+  .list { display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
+
+  .card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 24px;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    position: relative;
+  }
+  .card:hover {
+    background: var(--card-hover);
+    border-color: #333b4a;
+    transform: translateY(-2px);
+  }
+  .card-top {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-soft);
+    min-width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 2px;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0 10px 44px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    text-transform: uppercase;
+  }
+  .badge.start { color: var(--green); background: rgba(52, 211, 153, 0.12); }
+  .badge.optional { color: var(--amber); background: rgba(251, 191, 36, 0.12); }
+  .desc { color: var(--muted); font-size: 14.5px; margin-left: 44px; }
+  .watch {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 14px 0 0 44px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .watch svg { width: 16px; height: 16px; fill: var(--accent); }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  @media (max-width: 520px) {
+    .meta, .desc, .watch { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="eyebrow">Personal AI Infrastructure</span>
+      <h1>PAI Watchlist — Daniel Miessler</h1>
+      <p class="lede">Four videos on Personal AI Infrastructure: the philosophy, the anatomy, a real audit, and the hands-on build. Watch in order.</p>
+    </header>
+
+    <main class="list">
+
+      <a class="card" href="https://www.youtube.com/watch?v=DbNUDMcEjzY" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="num">1</span>
+          <span class="card-title">Pioneering PAI: How Daniel Miessler's Personal AI Infrastructure Activates Human Agency &amp; Creativity</span>
+        </div>
+        <div class="meta">
+          <span class="badge start">Start here</span>
+          <span>Cognitive Revolution podcast</span>
+          <span>·</span>
+          <span>Jan 2026</span>
+        </div>
+        <p class="desc">Daniel explains the whole philosophy: the TELOS file, the memory layers, and why an army of agents should serve one human. The best answer to "what is this thing."</p>
+        <span class="watch">
+          <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+          Watch on YouTube
+        </span>
+      </a>
+
+      <a class="card" href="https://www.youtube.com/watch?v=l9CPmPk2R-M" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="num">2</span>
+          <span class="card-title">Anatomy of an Agentic Personal AI Infrastructure</span>
+        </div>
+        <div class="meta">
+          <span>Conference talk</span>
+          <span>·</span>
+          <span>Mar 2026</span>
+        </div>
+        <p class="desc">Tighter and more structured. How the pieces fit together: assistant identity, skills, hooks, and the dashboard.</p>
+        <span class="watch">
+          <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+          Watch on YouTube
+        </span>
+      </a>
+
+      <a class="card" href="https://www.youtube.com/watch?v=AqxgBREOkNM" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="num">3</span>
+          <span class="card-title">Inside Nathan's Second Brain: Daniel Audits My AI Setup</span>
+        </div>
+        <div class="meta">
+          <span>May 2026</span>
+        </div>
+        <p class="desc">Daniel reviews someone else's real setup. Great for stealing practical ideas about what to actually use it for day to day.</p>
+        <span class="watch">
+          <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+          Watch on YouTube
+        </span>
+      </a>
+
+      <a class="card" href="https://www.youtube.com/watch?v=e0UlR2QdczU" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="num">4</span>
+          <span class="card-title">Build the Ultimate Personal AI Infrastructure Life Operating System</span>
+        </div>
+        <div class="meta">
+          <span class="badge optional">Optional</span>
+          <span>May 2026</span>
+        </div>
+        <p class="desc">The hands-on build video, more technical. Skippable for you since yours is already built.</p>
+        <span class="watch">
+          <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+          Watch on YouTube
+        </span>
+      </a>
+
+    </main>
+
+    <footer>
+      Self-contained page. Click any card to open the video in a new tab.
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "site": {
+    "title": "Artifacts",
+    "subtitle": "A page for pages. Every artifact Atlas builds, sorted by area of life."
+  },
+  "categories": [
+    { "id": "business",      "label": "Business",      "emoji": "💼", "color": "#3b82f6" },
+    { "id": "personal",      "label": "Personal",      "emoji": "🧠", "color": "#8b5cf6" },
+    { "id": "spiritual",     "label": "Spiritual",     "emoji": "🕊️", "color": "#14b8a6" },
+    { "id": "financial",     "label": "Financial",     "emoji": "💰", "color": "#22c55e" },
+    { "id": "miscellaneous", "label": "Miscellaneous", "emoji": "🗂️", "color": "#f59e0b" }
+  ],
+  "artifacts": [
+    {
+      "title": "PAI Watchlist — Daniel Miessler",
+      "description": "Four videos on Personal AI Infrastructure: the philosophy, the anatomy, a real audit, and the hands-on build.",
+      "category": "personal",
+      "file": "personal/pai-watchlist.html",
+      "date": "2026-07-13"
+    }
+  ]
+}
