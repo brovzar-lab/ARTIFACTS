@@ -6,6 +6,10 @@ sorted by area of life, and surfaced on one hub page.
 - **Live hub:** https://brovzar-lab.github.io/ARTIFACTS/
 - **Local hub:** open `index.html` in a browser
 
+## Screenshot
+
+![ARTIFACTS main page](docs/main-page.png)
+
 ## How it works
 
 1. `manifest.json` is the single source of truth. It lists every artifact:
